@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" th:href="@{../static/style.css}">
+</head>
+<body>
+<div class="banner">
+    <a href="/user">
+        <span th:if="${reader == null}">请先登录</span>
+        <span th:if="${reader != null}" th:text="${'欢迎，尊敬的'+reader.username+'先生/女士'}"/>
+    </a>
+</div>
+<div>
+    <h2>欢迎</h2>
+</div>
+<hr>
+<div>
+    <p>今日要闻</p>
+</div>
+</body>
+</html>
